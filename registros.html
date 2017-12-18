@@ -961,10 +961,12 @@
 							}
 						}
 						sql_a += ") VALUES (";
-						var regex2 = new RegExp("[0-9]{1,2}-[0-9]{1,2}-[0-9]{4}");
+						var regex2 = new RegExp("[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}");
 						for ( i = 0; i < labelml_comp.length; i++){
 							if(regex.test(labelml_comp[i].value)){
+								if(regex2.test(labelml_comp[i].value)){
 									labelml_comp[i].value = fecha(labelml_comp[i].value);
+								}
 							}
 							if( i == labelml_comp.length - 1){
 								sql_a += "'" + labelml_comp[i].value + "')";
