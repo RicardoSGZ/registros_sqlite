@@ -17,9 +17,9 @@
 			font-family: sans-serif;
 		}
 		#btn_pr{
-			font-size: 16pt;
-			padding: 2px 7px 2px 7px;
-			margin: 0px;
+			font-size: 80%;
+			padding: 5px;
+			margin-top: 0%;
 			float: right;
 			border-width: 1px;
 			border-style: solid;
@@ -103,7 +103,7 @@
 			background: -o-linear-gradient(top, white, rgb(225, 225, 225));
 			background: -moz-linear-gradient(top, white, rgb(225, 225, 225));
 			background: linear-gradient(top, white, rgb(225, 225, 225));
-			padding: 1%;
+			padding: 0.5%;
 			text-align: center;
 		}
 		
@@ -243,18 +243,7 @@
 			margin-bottom: 3%;
 		}
 		
-		table,
-		td {
-			border: 1px solid black;
-		}
 		
-		table {
-			width: 95%;
-		}
-		
-		canvas[id^="graf"] {
-			width: 100%;
-		}
 		@media screen and (min-width: 520px) {
 			#filexp{
 				width: 35%;
@@ -324,22 +313,6 @@
 				margin-top: .5%;
 				padding: 1%;
 			}
-			#grafs {
-				float: left;
-				position: relative;
-			}
-			canvas[id^="graf"] {
-				width: 30%;
-				float: left;
-				position: relative;
-				margin: 0.5%;
-			}
-			#marcas,
-			#funciona,
-			#years {
-				width: 25%;
-				float: left;
-			}
 		}
 		@media screen and (min-width: 920px){
 			#esp {
@@ -355,8 +328,7 @@
 <body id="up">
 	<div class="titulo">
 		<button id="btn_pr">&#8801;</button>
-		<h1 id="title">Registros<small>beta 17.08</small></h1>
-		<button id="btn_secc_crtable">Crear tabla</button>
+		<h1 id="title">Registros<small>versión 2017</small></h1>
 		<button id="btn_secc_home">Buscar registro</button>
 		<button id="btn_secc_add">Añadir registro</button>
 		<button id="btn_secc_modif">Modificar registro</button>
@@ -364,7 +336,7 @@
 	</div>
 	
 	<a href="#up" id="arriba">&uarr;</a>
-	<input type="file" id="filexp" /><input type="text" id="selecc_table" placeholder="Nombre de la tabla"/>
+	<input type="file" id="filexp" />
 	<div class="contenedor">
 		<div id="search_zone">
 			<select id="column_type">
@@ -390,29 +362,7 @@
 		<p id="num"></p>
 		<div id="basedatos">
 		</div>
-		<div id="create_table">
-
-			<label for="cat1">Categoría 1</label><input type="text" class="field cr_field" id="cat1" placeholder="nombre de la categoría">
-			<label for="cat1_type">Tipo de valores (categ. 1)</label><input type="text" class="field crt_field" id="cat1_type" placeholder="enteros, decimales, texto corto, texto largo"><br/>
-			<label for="cat2">Categoría 2</label><input type="text" class="field cr_field" id="cat2" placeholder="nombre de la categoría">
-			<label for="cat2_type">Tipo de valores (categ. 2)</label><input type="text" class="field crt_field" id="cat2_type" placeholder="enteros, decimales, texto corto, texto largo"><br/>
-			<label for="cat3">Categoría 3</label><input type="text" class="field cr_field" id="cat3" placeholder="nombre de la categoría">
-			<label for="cat3_type">Tipo de valores (categ. 3)</label><input type="text" class="field crt_field" id="cat3_type" placeholder="enteros, decimales, texto corto, texto largo"><br/>
-			<label for="cat4">Categoría 4</label><input type="text" class="field cr_field" id="cat4" placeholder="nombre de la categoría">
-			<label for="cat4_type">Tipo de valores (categ. 4)</label><input type="text" class="field crt_field" id="cat4_type" placeholder="enteros, decimales, texto corto, texto largo"><br/>
-			<label for="cat5">Categoría 5</label><input type="text" class="field cr_field" id="cat5" placeholder="nombre de la categoría">
-			<label for="cat5_type">Tipo de valores (categ. 5)</label><input type="text" class="field crt_field" id="cat5_type" placeholder="enteros, decimales, texto corto, texto largo"><br/>
-			<label for="cat6">Categoría 6</label><input type="text" class="field cr_field" id="cat6" placeholder="nombre de la categoría">
-			<label for="cat6_type">Tipo de valores (categ. 6)</label><input type="text" class="field crt_field" id="cat6_type" placeholder="enteros, decimales, texto corto, texto largo"><br/>
-			<label for="cat7">Categoría 7</label><input type="text" class="field cr_field" id="cat7" placeholder="nombre de la categoría">
-			<label for="cat7_type">Tipo de valores (categ. 7)</label><input type="text" class="field crt_field" id="cat7_type" placeholder="enteros, decimales, texto corto, texto largo"><br/>
-			<label for="cat8">Categoría 8</label><input type="text" class="field cr_field" id="cat8" placeholder="nombre de la categoría">
-			<label for="cat8_type">Tipo de valores (categ. 8)</label><input type="text" class="field crt_field" id="cat8_type" placeholder="enteros, decimales, texto corto, texto largo"><br/>
-			<label for="cat9">Categoría 9</label><input type="text" class="field cr_field" id="cat9" placeholder="nombre de la categoría">
-			<label for="cat9_type">Tipo de valores (categ. 9)</label><input type="text" class="field crt_field" id="cat9_type" placeholder="enteros, decimales, texto corto, texto largo"><br/>
-			<button id="btn_create_table">CREAR TABLA</button>
-
-		</div>
+		
 		<div id="add_zone">
 			<div id="add_fields"></div>
 			<button id="add_item">AÑADIR</button>
@@ -435,16 +385,11 @@
 			</select><br/><br/>
 			<button id="button_ml">BUSCAR</button>
 		</div>
-		<div id="stadis">
-		</div>
 	</div>
 	<script src="sql.js"></script>
 	<script>
 		document.getElementById("btn_pr").addEventListener("click", function () {
 			menu_resp();
-		});
-		document.getElementById("btn_secc_crtable").addEventListener("click", function () {
-			crear_tabla();
 		});
 		document.getElementById("btn_secc_add").addEventListener("click", function () {
 			anadir_registros();
@@ -475,26 +420,8 @@
 			}
 			
 		}
-		function crear_tabla(){
-			document.getElementById("create_table").style.display = "block";
-			document.getElementById("selecc_table").setAttribute('disabled', '');
-			document.getElementById("mult_search").style.display = "none";
-			document.getElementById("stadis").style.display = "none";
-			document.getElementById("search_zone").style.display = "none";
-			document.getElementById("basedatos").style.display = "none";
-			document.getElementById("add_zone").style.display = "none";
-			document.getElementById("mod_zone").style.display = "none";
-			document.getElementById("num").style.display = "none";
-			document.getElementById("btn_secc_add").style.backgroundColor = "white";
-			document.getElementById("btn_secc_modif").style.backgroundColor = "white";
-			document.getElementById("btn_secc_home").style.backgroundColor = "white";
-			document.getElementById("btn_secc_crtable").style.backgroundColor = "rgb(100,150,255)";
-		}
 		function anadir_registros() {
-			document.getElementById("selecc_table").removeAttribute('disabled');
-			document.getElementById("create_table").style.display = "none";
 			document.getElementById("mult_search").style.display = "none";
-			document.getElementById("stadis").style.display = "none";
 			document.getElementById("search_zone").style.display = "none";
 			document.getElementById("basedatos").style.display = "none";
 			document.getElementById("add_zone").style.display = "block";
@@ -503,13 +430,9 @@
 			document.getElementById("btn_secc_add").style.backgroundColor = "rgb(100,150,255)";
 			document.getElementById("btn_secc_modif").style.backgroundColor = "white";
 			document.getElementById("btn_secc_home").style.backgroundColor = "white";
-			document.getElementById("btn_secc_crtable").style.backgroundColor = "white";
 		}
 		function modif_registros() {
-			document.getElementById("selecc_table").removeAttribute('disabled');
-			document.getElementById("create_table").style.display = "none";
 			document.getElementById("mult_search").style.display = "none";
-			document.getElementById("stadis").style.display = "none";
 			document.getElementById("search_zone").style.display = "none";
 			document.getElementById("basedatos").style.display = "none";
 			document.getElementById("add_zone").style.display = "none";
@@ -518,13 +441,9 @@
 			document.getElementById("btn_secc_add").style.backgroundColor = "white";
 			document.getElementById("btn_secc_modif").style.backgroundColor = "rgb(100,150,255)";
 			document.getElementById("btn_secc_home").style.backgroundColor = "white";
-			document.getElementById("btn_secc_crtable").style.backgroundColor = "white";
 		}
 		function home() {
-			document.getElementById("selecc_table").removeAttribute('disabled');
-			document.getElementById("create_table").style.display = "none";
 			document.getElementById("mult_search").style.display = "none";
-			document.getElementById("stadis").style.display = "none";
 			document.getElementById("search_zone").style.display = "block";
 			document.getElementById("basedatos").style.display = "block";
 			document.getElementById("add_zone").style.display = "none";
@@ -532,14 +451,10 @@
 			document.getElementById("num").style.display = "block";
 			document.getElementById("btn_secc_add").style.backgroundColor = "white";
 			document.getElementById("btn_secc_modif").style.backgroundColor = "white";
-			document.getElementById("btn_secc_crtable").style.backgroundColor = "white";
 			document.getElementById("btn_secc_home").style.backgroundColor = "rgb(100,150,255)";
 		}
 		function bus_mult() {
-			document.getElementById("selecc_table").removeAttribute('disabled');
-			document.getElementById("create_table").style.display = "none";
 			document.getElementById("mult_search").style.display = "block";
-			document.getElementById("stadis").style.display = "none";
 			document.getElementById("search_zone").style.display = "none";
 			document.getElementById("basedatos").style.display = "none";
 			document.getElementById("add_zone").style.display = "none";
@@ -547,7 +462,6 @@
 			document.getElementById("num").style.display = "none";
 			document.getElementById("btn_secc_add").style.backgroundColor = "white";
 			document.getElementById("btn_secc_modif").style.backgroundColor = "white";
-			document.getElementById("btn_secc_crtable").style.backgroundColor = "white";
 			document.getElementById("btn_secc_home").style.backgroundColor = "rgb(100,150,255)";
 			categories("order_ml");
 		}
@@ -575,18 +489,18 @@
 				espacio.setAttribute("id", "esp");
 				var tabla = document.createElement("tabla");
 				
-				var sql_new_3 = "SELECT * FROM categorias WHERE db_name != 'images' AND db_name != 'image1' AND db_name != 'image2'";
+				var sql_new_3 = "SELECT * FROM categorias WHERE db_name != 'img_pr' AND db_name != 'img_sc1' AND db_name != 'img_sc2' AND db_name != 'img_sc3'";
 				var stmt_new_3 = db.prepare(sql_new_3);
 				var n = 0;
 				while(stmt_new_3.step()){
 					var row_new_3 = stmt_new_3.getAsObject();
 					if(n == 2) {
-						if(row['images'] != ""){
+						if(row['img_pr'] != ""){
 						var a = document.createElement("a");
-						a.setAttribute("href", row["images"]);
+						a.setAttribute("href", row["img_pr"]);
 						a.setAttribute("target", "_blank");
 						var img = document.createElement("img");
-						img.setAttribute("src", row["images"]);
+						img.setAttribute("src", row["img_pr"]);
 						img.setAttribute("id", "imgprin");
 						a.appendChild(img);
 						tabla.appendChild(a);
@@ -598,26 +512,26 @@
 					tabla.appendChild(layer);
 					n++;
 				}	
-				var a2 = document.createElement("a");
-				a2.setAttribute("href", row["image1"]);
-				a2.setAttribute("target", "_blank");
-				var img_2 = document.createElement("img");
-				img_2.setAttribute("src", row["image1"]);
-				if (img_2.getAttribute("src") == "") {
-					img_2.style.display = "none";
+				if(row["img_sc1"]!= ''){
+					var a2 = document.createElement("a");
+					a2.setAttribute("href", row["img_sc1"]);
+					a2.setAttribute("target", "_blank");
+					var img_2 = document.createElement("img");
+					img_2.setAttribute("src", row["img_sc1"]);
+					tabla.appendChild(a2);
+					a2.appendChild(img_2);
 				}
-				a2.appendChild(img_2);
-				var a3 = document.createElement("a");
-				a3.setAttribute("href", row["image2"]);
-				a3.setAttribute("target", "_blank");
-				var img_3 = document.createElement("img");
-				img_3.setAttribute("src", row["image2"]);
-				if (img_3.getAttribute("src") == "") {
-					img_3.style.display = "none";
+				if(row["img_sc2"]!= ''){
+					var a3 = document.createElement("a");
+					a3.setAttribute("href", row["img_sc2"]);
+					a3.setAttribute("target", "_blank");
+					var img_3 = document.createElement("img");
+					img_3.setAttribute("src", row["img_sc2"]);
+					a3.appendChild(img_3);	
+					
+					tabla.appendChild(a3);
 				}
-				a3.appendChild(img_3);	
-				tabla.appendChild(a2);
-				tabla.appendChild(a3);
+				
 				espacio.appendChild(tabla);
 				document.getElementById("basedatos").appendChild(espacio);
 			}
@@ -629,14 +543,8 @@
 			while (stmt_t.step()) {
 				var row_t = stmt_t.getAsObject();
 			}
-			var n2 = 0;
 			var n = document.getElementsByTagName("tabla").length;
-			for (var i = 0; i < n; i++) {
-				if (document.getElementsByTagName("tabla")[i]) {
-					n2 += 1;
-				}
-			}
-			document.getElementById("num").innerHTML = "Número de registros seleccionados: " + n2 + " (" + ((n2 / row_t["num"]) * 100).toFixed(2) + "%)";
+			document.getElementById("num").innerHTML = "Número de registros seleccionados: " + n + " (" + ((n / row_t["num"]) * 100).toFixed(2) + "%)";
 			stmt_t.free();
 		}
 		//FORMATO CATEGORIAS
@@ -670,89 +578,11 @@
 			arr = arr.join("-");
 			return arr;
 		}
-		// CONEXIÓN A LA BASE DE DATOS PARA CREAR TABLA
-		document.getElementById("btn_create_table").addEventListener("click", function(){
-		
-					var db = new SQL.Database();
-
-					var cr_field = document.getElementsByClassName("cr_field");
-					var crt_field = document.getElementsByClassName("crt_field");
-					var cat_conv;
-					var cat_type_conv;
-					if(cr_field[0] == ""){
-						alert("Introduzca al menos una categoría y la clase de valor que contendrá");
-					}else{
-						if(crt_field[0].value == "enteros"){
-							cat_type_conv = "integer";
-						}else if(crt_field[0].value == "decimales"){
-							cat_type_conv = "float";
-						}else if(crt_field[0].value == "texto corto"){
-							cat_type_conv = "varchar(100)";
-						}else if(crt_field[0].value == "texto largo"){
-							cat_type_conv = "varchar(255)";
-						}
-						 
-						cat_conv = converter(cr_field[0].value);
-						var sql_crt_cats = "CREATE TABLE IF NOT EXISTS 'categorias' ('full_name' varchar(100), 'db_name' varchar(100))";
-						db.run(sql_crt_cats);
-						var sql_crt_cats_ins = "INSERT INTO categorias ('full_name', 'db_name') VALUES ('ID', 'id')";
-						db.run(sql_crt_cats_ins);
-						var sql_crt = "CREATE TABLE IF NOT EXISTS 'tabla'";
-						sql_crt += " ('id' integer PRIMARY KEY, '" + cat_conv + "' " + cat_type_conv;
-						sql_crt_cats_ins = "INSERT INTO categorias ('full_name', 'db_name') VALUES ('" + cr_field[0].value + "', '" + cat_conv + "')";
-						db.run(sql_crt_cats_ins);
-						for (var i = 1; i < cr_field.length; i++){
-							if (cr_field[i].value != ""){
-								cat_conv = converter(cr_field[i].value);
-								if(crt_field[i].value == "enteros"){
-									cat_type_conv = "integer";
-								}else if(crt_field[i].value == "decimales"){
-									cat_type_conv = "float";
-								}else if(crt_field[i].value == "texto corto"){
-									cat_type_conv = "varchar(100)";
-								}else if(crt_field[i].value == "texto largo"){
-									cat_type_conv = "varchar(255)";
-								}
-								sql_crt += ", '" + cat_conv + "' " + cat_type_conv;
-								sql_crt_cats_ins = "INSERT INTO categorias ('full_name', 'db_name') VALUES ('" + cr_field[i].value + "', '" + cat_conv + "')";
-								db.run(sql_crt_cats_ins);
-							}
-						}
-						sql_crt_cats_ins = "INSERT INTO categorias ('full_name', 'db_name') VALUES ('Imagen principal', 'images')";
-						db.run(sql_crt_cats_ins);
-						sql_crt_cats_ins = "INSERT INTO categorias ('full_name', 'db_name') VALUES ('Imagen 2', 'image1')";
-						db.run(sql_crt_cats_ins);
-						sql_crt_cats_ins = "INSERT INTO categorias ('full_name', 'db_name') VALUES ('Imagen 3', 'image2')";
-						db.run(sql_crt_cats_ins);
-						sql_crt += ", 'images' varchar(100), 'image1' varchar(100), 'image2' varchar(100))";
-						db.run(sql_crt);
-						alert("Tabla creada");
-						var binaryArray = db.export();
-						var blob = new Blob([binaryArray], { type: "application/octet-stream" });
-						var url = window.URL.createObjectURL(blob);
-						var link = document.createElement('a');
-						link.href = url;
-						link.style.display = "none";
-						link.setAttribute("id", "dld");
-						link.setAttribute('download', "registros.db");
-						document.getElementById("search_zone").after(link);
-						link.click();
-						window.URL.revokeObjectURL(url);
-					}
-					
-			});
 		
 	// CONEXIÓN A LA BASE DE DATOS PARA BUSCAR/AÑADIR/MODIFICAR
 	var dbFileElm = document.getElementById("filexp");
-	
-	var table_select;
+	var table_select = "tabla";
 	dbFileElm.addEventListener("change", function () {
-		var selecc_table = document.getElementById("selecc_table").value;
-		if(selecc_table.toLowerCase() != ""){
-			table_select = selecc_table.toLowerCase();
-		}else{
-			table_select = "tabla";
-		}
 			var input = document.getElementById("search_text");
 			var f = dbFileElm.files[0];
 			var r = new FileReader();
